@@ -9,6 +9,6 @@ const mongoose = require('mongoose');
     useFindAndModify : false
 }).then(()=>{
     console.log('connection established for mongo db');
-}).catch(()=>{
-    console.log('No connections');
+}).catch((e)=>{
+    console.log('No connections..'+ e);
 })
