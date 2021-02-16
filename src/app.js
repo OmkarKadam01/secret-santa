@@ -1,6 +1,7 @@
 const express = require('express');
 require('./db/conn');
 const User = require('./models/user');
+var firebase = require("firebase/app");
 
 
 const app = express();
