@@ -1,15 +1,16 @@
 const express = require('express');
 require('./db/conn');
 const User = require('./models/user');
-var firebase = require("firebase/app");
 
 
 const app = express();
 app.use(express.json());
 
+console.log('App Installed...');
 app.get('/',(req,res)=>{
     const users =  User.find();
     console.log(users)
+    console.log('Get called');
     res.send('Hello world');
 });
 
