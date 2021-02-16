@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
 //     console.log(e);
 // })
 
+
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://user:Omkar@123@cluster0.gmwag.mongodb.net/user-db?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true });
