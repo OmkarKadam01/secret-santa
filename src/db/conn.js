@@ -16,7 +16,11 @@ const mongoose = require('mongoose');
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://user:Omkar@123@cluster0.gmwag.mongodb.net/user-db?retryWrites=true&w=majority";
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useCreateIndex : true,
+        useNewUrlParser : true,
+        useUnifiedTopology : true,
+        useFindAndModify : false
+ });
 client.connect(err => {
   const collection = client.db("user-db").collection("users");
   console.log(collection);
